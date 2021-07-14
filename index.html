@@ -1,32 +1,10 @@
 <!DOCTYPE html>
 <html>
- <head>
-<?php
-
-	$archivo = "visitas.txt";
-			
-      	//si no esta creado el archivo visitas.txt lo crea y escribe 0 en él.
-	if (!file_exists($archivo)){
-		$f = fopen($archivo, "w");
-		fwrite($f,"0");
-		fclose($f);
-	}
-			
-	//lo lee para ver las visitas que lleva la página
-	$f = fopen($archivo,"r");
-	$contador = fread($f, filesize($archivo));
-	fclose($f);
-			
-	//le suma uno y lo escribe
-	$contador++;
-	$f = fopen($archivo, "w");
-	fwrite($f, $contador);
-	fclose($f); 
-      
-      	//lo muestra por pantalla.
-	echo "<a>VISITAS: $contador</a>";
-
-?>
+ <head> 
+	 <div id="sfclulzgdmzkd1r7nqfn6axa22ty9ht1n92"></div>
+<script type="text/javascript" src="https://counter2.stat.ovh/private/counter.js?c=lulzgdmzkd1r7nqfn6axa22ty9ht1n92&down=async" async></script>
+<noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas"><img src="https://counter2.stat.ovh/private/contadorvisitasgratis.php?c=lulzgdmzkd1r7nqfn6axa22ty9ht1n92" border="0" title="contador de visitas" alt="contador de visitas"></a></noscript>
+	 
   <title>MANTENIMIENTO Y REPARACION DE PC E IMPRESORAS</title>
   <meta charset="UTF-8">
 
