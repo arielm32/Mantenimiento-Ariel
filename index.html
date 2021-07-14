@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T30SJJWSP9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<?php
 
-  gtag('config', 'G-T30SJJWSP9');
-</script>
+	$archivo = "visitas.txt";
+			
+      	//si no esta creado el archivo visitas.txt lo crea y escribe 0 en él.
+	if (!file_exists($archivo)){
+		$f = fopen($archivo, "w");
+		fwrite($f,"0");
+		fclose($f);
+	}
+			
+	//lo lee para ver las visitas que lleva la página
+	$f = fopen($archivo,"r");
+	$contador = fread($f, filesize($archivo));
+	fclose($f);
+			
+	//le suma uno y lo escribe
+	$contador++;
+	$f = fopen($archivo, "w");
+	fwrite($f, $contador);
+	fclose($f); 
+      
+      	//lo muestra por pantalla.
+	echo "<a>VISITAS: $contador</a>";
+
+?>
   <title>MANTENIMIENTO Y REPARACION DE PC E IMPRESORAS</title>
   <meta charset="UTF-8">
 
